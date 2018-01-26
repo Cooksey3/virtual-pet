@@ -9,7 +9,7 @@ public class VirtualPetApp {
 		Scanner input = new Scanner(System.in);
 
 		VirtualPet myPet = new VirtualPet();
-		
+
 		System.out.println("Call your pet to you!");
 		String petName = input.next();
 

@@ -52,12 +52,12 @@ public class VirtualPet {
 	public int tickBoredom() {
 		return boredomLevel += 1;
 	}
-	
+
 	public void tick() {
 		hungerLevel += 1;
 		thirstLevel += 1;
 		boredomLevel += 1;
-		
+
 	}
 
 }
