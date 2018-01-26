@@ -3,14 +3,14 @@ package virtual.pet;
 public class VirtualPet {
 
 	private int hungerLevel;
-	private String petName = "Bilbo";
+	private String petName;
 	private int thirstLevel;
 	private int boredomLevel;
 
 	public VirtualPet() {
-		hungerLevel = 1;
-		boredomLevel = 1;
-		thirstLevel = 1;
+		hungerLevel = 10;
+		boredomLevel = 10;
+		thirstLevel = 10;
 	}
 
 	public boolean callPet(String calledName) {
@@ -51,6 +51,13 @@ public class VirtualPet {
 
 	public int tickBoredom() {
 		return boredomLevel += 1;
+	}
+	
+	public void tick() {
+		hungerLevel += 1;
+		thirstLevel += 1;
+		boredomLevel += 1;
+		
 	}
 
 }
