@@ -56,12 +56,29 @@ public class VirtualPetTest {
 		int decreasedBoredomLevel = boredomLevel - 1;
 		Assert.assertEquals(0, boredomLevel);
 	}
-	
+
 	@Test
-	public void tickHunger() {
+	public void shouldIncreaseHungerLevel() {
 		VirtualPet underTest = new VirtualPet();
-		int hungerLevel = underTest.tick().hunger();
-		int tick = 
+		int hungerLevel = underTest.tickHunger();
+		int tick = hungerLevel + 1;
+		Assert.assertEquals(2, hungerLevel);
+	}
+
+	@Test
+	public void shouldIncreaseThirstLevel() {
+		VirtualPet underTest = new VirtualPet();
+		int thirstLevel = underTest.tickThirst();
+		int tick = thirstLevel + 1;
+		Assert.assertEquals(2, thirstLevel);
+	}
+
+	@Test
+	public void shouldIncreaseBoredomLevel() {
+		VirtualPet underTest = new VirtualPet();
+		int boredomLevel = underTest.tickBoredom();
+		int tick = boredomLevel + 1;
+		Assert.assertEquals(2, boredomLevel);
 	}
 
 }

@@ -13,8 +13,8 @@ public class VirtualPet {
 		thirstLevel = 1;
 	}
 
-	public boolean callPet(String enteredPetName) {
-		return enteredPetName.equals(petName);
+	public boolean callPet(String calledName) {
+		return calledName.equals(petName);
 	}
 
 	public int getHungerLevel() {
@@ -39,6 +39,18 @@ public class VirtualPet {
 
 	public int getDecreasedBoredomLevel() {
 		return boredomLevel -= 1;
+	}
+
+	public int tickHunger() {
+		return hungerLevel += 1;
+	}
+
+	public int tickThirst() {
+		return thirstLevel += 1;
+	}
+
+	public int tickBoredom() {
+		return boredomLevel += 1;
 	}
 
 }
