@@ -44,21 +44,6 @@ public class VirtualPetApp {
 			}
 
 			myPet.tick();
-
-//			System.out.println();
-//			System.out.println(myPet + "'s vitals are now:");
-//			System.out.println("Hunger: " + myPet.getHungerLevel());
-//			System.out.println("Thirst: " + myPet.getThirstLevel());
-//			System.out.println("Boredom: " + myPet.getBoredomLevel());
-//			System.out.println();
-//			System.out.println("What else would you like to do?");
-//			System.out.println("0: Give " + petName + " up for adoption.");
-//			System.out.println("1: Feed " + petName + ".");
-//			System.out.println("2: Give water to " + petName + ".");
-//			System.out.println("3: Play with " + petName + ".");
-//			System.out.println("4: Put  " + petName + " down for a nap.");
-
-//			option = input.next();
 		}
 
 		System.out.println("You gave " + petName + " up for adoption. " + petName + " is heartbroken.");
