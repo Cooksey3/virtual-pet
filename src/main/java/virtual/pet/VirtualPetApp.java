@@ -8,10 +8,10 @@ public class VirtualPetApp {
 
 		Scanner input = new Scanner(System.in);
 
-		VirtualPet myPet = new VirtualPet();
-
 		System.out.println("Call your pet to you!");
 		String petName = input.next();
+
+		VirtualPet myPet = new VirtualPet(petName);
 
 		System.out.println(petName + "'s vitals are:");
 		System.out.println("Hunger: " + myPet.getHungerLevel());
@@ -30,13 +30,13 @@ public class VirtualPetApp {
 		while (!option.equals("0")) {
 
 			if (option.equals("1")) {
-				myPet.getDecreasedHungerLevel();
+				myPet.decreaseHungerLevel();
 				System.out.println("You fed " + petName + ".");
 			} else if (option.equals("2")) {
-				myPet.getDecreasedThirstLevel();
+				myPet.decreaseThirstLevel();
 				System.out.println("You watered " + petName + ".");
 			} else if (option.equals("3")) {
-				myPet.getDecreasedBoredomLevel();
+				myPet.decreaseBoredomLevel();
 				System.out.println("You played with " + petName + ".");
 			} else {
 				System.out.println("Choose a different option");
@@ -45,7 +45,7 @@ public class VirtualPetApp {
 			myPet.tick();
 
 			System.out.println();
-			System.out.println("Bilbo's vitals are now:");
+			System.out.println(myPet + "'s vitals are now:");
 			System.out.println("Hunger: " + myPet.getHungerLevel());
 			System.out.println("Thirst: " + myPet.getThirstLevel());
 			System.out.println("Boredom: " + myPet.getBoredomLevel());
