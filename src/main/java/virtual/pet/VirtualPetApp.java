@@ -26,7 +26,6 @@ public class VirtualPetApp {
 			System.out.println("1: Feed " + petName + ".");
 			System.out.println("2: Give water to " + petName + ".");
 			System.out.println("3: Play with " + petName + ".");
-			System.out.println("4: Put  " + petName + " down for a nap.");
 			System.out.print("Select an option: ");
 			option = input.next();
 
